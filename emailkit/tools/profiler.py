@@ -16,9 +16,9 @@ class Profiler:
     def runtime_profiler(self, fn):
         @wraps(fn)
         def profiling_time(*args, **kwargs):
-            start_time = time.time()
+            start_time = time.perf_counter()
             ret = fn(*args, **kwargs)
-            end_time = time.time()
+            end_time = time.perf_counter()
             elapsed_time = end_time - start_time
             process_pid: int = os.getpid()
             runtime_info: dict = {fn.__name__: {"time_required": elapsed_time, "arguments": args, "time_started": start_time, "time_ended": end_time}}
@@ -34,5 +34,5 @@ class Profiler:
     def __str__(self):
         return str(self._profiled_data)
 
-    def __json__(self):
+    def __to_json(self):
         return json.dumps(self._profiled_data)

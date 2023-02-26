@@ -7,8 +7,11 @@ name = "pypi"
 schedule = "*"
 cryptography = "*"
 pytest-async = "*"
+pytest = "*"
+pytest-asyncio = "*"
 
 [dev-packages]
+black = "*"
 
 [requires]
 python_version = "3.10"

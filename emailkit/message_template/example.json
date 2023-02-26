@@ -1,6 +1,6 @@
 {
   "attachment": [
-    "/path/to/file.txt",
+    "/Users/dbpiening/java-lib.sh",
     "/path/to/another/file.txt"
   ],
   "bcc": [
@@ -8,7 +8,7 @@
     "jason@test.com"
   ],
   "sender": "Dierk-Bent Piening", 
-  "message": "Hallo wie geht es dir\nWas machst du denn heute so?",
+  "message": "<!DOCTYPE html><h1>PYMAILKIT TEST EMAIL </h1><h2>This is an Test Email template</h2></!DOCTYPE html>",
   "subject": "Test",
   "recipient_address": ["dierk.bent.piening@gmail.com"]
 }

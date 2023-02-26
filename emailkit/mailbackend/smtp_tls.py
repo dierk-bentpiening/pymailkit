@@ -1,13 +1,12 @@
 import smtplib
 import logging
 from .smtp import SMTP
-from emailkit import MailerDaemon
+from emailkit.email import MailerDaemon
 class SMTP_TLS(SMTP):
 
     def __init__(self, mailer_config: MailerDaemon=None, logger = None):
         self._mailer_config = mailer_config
         if logger == None:
-            logging.basicConfig()
             self._logger = logging.getLogger(__name__)
             self._logger.setLevel(logging.DEBUG)
         else:

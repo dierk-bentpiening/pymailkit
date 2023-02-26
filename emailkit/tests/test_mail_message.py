@@ -1,4 +1,5 @@
 from emailkit.message import MailMessage
+from emailkit.tools import JsonWerkzeug
 
 
 class TestMailMessage:
@@ -13,4 +14,8 @@ class TestMailMessage:
         assert isinstance(mail_message, MailMessage) is True, "Test if MailMessage Object created"
         assert mail_message.use_default_sender_address is True, "Test if mail_message is marked true with use_default_sender_address"
 
-
+    def test_message_export_json(self):
+        mail_message = MailMessage("rectest@test.com", "mail subject", "message body", "John Tester",)
+        assert JsonWerkzeug().validatejson(mail_message._to_json()) is True, "test if message exported json is valid"
+        
+        

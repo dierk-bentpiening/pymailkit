@@ -1,7 +1,8 @@
-__all__ = ['mail_address', 'message', 'mailer', 'emailvalidator', 'exceptions', 'mailbackend']
-
-from emailkit.mail_address import MailAccount
+__all__ = ['mailaccount', 'message', 'mailer', 'emailvalidator', 'exceptions', 'mailbackend']
+import emailkit.mailaccount
+from emailkit.mailaccount.account import MailAccount
 from emailkit.message import MailMessage
 from emailkit.emailvalidator import EmailAddressValidator
-from emailkit.mailer import MailerDaemon
+from emailkit.email import SimpleMailer, ScheduledMailer
 from emailkit import mailbackend
+
