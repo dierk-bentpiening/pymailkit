@@ -1,2 +1,0 @@
-from emailkit.tests.test_emailvalidator import TestEmailValidation
-from emailkit.tests.test_mail_message import TestMailMessage
